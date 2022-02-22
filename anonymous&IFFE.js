@@ -3,7 +3,6 @@
 //a. Print odd numbers in an array.
 
 //anonymous function
-/*
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var odd = function(a)
 {
@@ -25,7 +24,6 @@ odd(arr);
 */
 
 // IFFE
-/*
 (function(odd){
     odd.forEach(element => {
         if(element%2!==0)
@@ -44,7 +42,6 @@ odd(arr);
 //b. Convert all the strings to title caps in a string array
 
 //anonymous function
-/*
 (function()
 {
   const strings =["this is","why we","do coding"];
@@ -63,25 +60,21 @@ odd(arr);
   }
   console.log(value);
 })();
-*/
 // output=> [ 'This Is', 'Why We', 'Do Coding' ]
 
 // IFFE
-/*
 (function(s){
     let arr = s.split(' ');
     let arr2 = arr.map(a => a.charAt(0).toUpperCase()+a.substring(1));
     s = arr2.join(' ');
     console.log(s);
 })("hey guys this is chakri");
-*/
 //output=> Hey Guys This Is Chakri
 
 
 //c. Sum of all numbers in an array.
 
 //anonymous function
-/*
 var nums=[1,2,3,4,5,6,7,8,9,10];
 var b=function(nums)
 {
@@ -93,22 +86,19 @@ var b=function(nums)
     return sum;
 }
 console.log(b(nums));
-*/ // output=> 55 
+// output=> 55 
 
 // IFFE
-/*
 (function(nums){
     let sum = nums.reduce((total,next) => { return total + next},0);
     console.log(sum);
 })([1,2,3,4,5,6,7,8,9,10]); 
-*/
 //output=> 55
 
 
 //d. Return all the prime numbers in an array.
 
 //anonymous
-/*
 const arrnum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
   let isPrime=function (num) {
     for (let i = 2; num > i; i++) {
@@ -118,11 +108,10 @@ const arrnum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     }
     return num > 1;
   }
-  console.log(arrnum.filter(isPrime));*/
+  console.log(arrnum.filter(isPrime));
   //output=> [ 2, 3, 5, 7, 11, 13 ]
 
   // IFFE
-  /*
   var prime = (function (arr) {
     array = arr.filter((number) => {
       if (number == 1) {
@@ -140,14 +129,13 @@ const arrnum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     });
     return array;
   })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-  console.log(prime); */
+  console.log(prime);
 //output=> [ 2, 3, 5, 7, 11, 13 ]
 
 
 //e. Return all the palindromes in an array
 
 //anonymous function
-/*
 const palidrom =["NITIN",1221,"kanak",12345];
 var validate=function(palidrom) 
 {
@@ -162,11 +150,10 @@ var validate=function(palidrom)
   }
   return true;
 }
-console.log(palidrom.filter(validate));*/
+console.log(palidrom.filter(validate));
 //output=> [ 'NITIN', 1221, 'kanak' ]
 
 // IFFE
-/*
 let palindrome = (function (arr) {
     let array = arr.filter((string) => {
       let s = string.toLowerCase();
@@ -188,14 +175,13 @@ let palindrome = (function (arr) {
     });
     return array;
   })(["Malayalam", "jithin", "Kannak", "Eye", "charge"]);
-  console.log(palindrome);*/
+  console.log(palindrome);
   //output=> [ 'Malayalam', 'Kannak', 'Eye' ]
 
 
 //f. Return median of two sorted arrays of the same size.
 
 //anonymous function
-/*
 var arr = [1,2,3,4,5]
 var arr1 = [6,7,8,9,10];
 var median;
@@ -210,10 +196,9 @@ else
 median = (result[n/2])/2;
 }
 console.log(median); //output=> 6.5
-*/
+
 
 // IFFE
-/*
 (function(arr,arr1)
 {
 var median;
@@ -230,13 +215,12 @@ median=(result[n/2])/2;
 console.log(median);
 })([1,2,3,4,5],[6,7,8,9,10]);
 //output=> 6.5 
-*/
+
 
 
 //g. Remove duplicates from an array.
 
 //anonymous function
-/*
 arr=[1,2,3,4,5,5,4,3,2,1,9,8,4,7,9,10]
 const res=function(arr){
     let obj = {};
@@ -252,15 +236,13 @@ const res=function(arr){
     console.log(a);
 };
 res(arr); //filter out duplicates from the array
-/*
-output=> [
+/*output=> [
   1, 2, 3,  4, 5,
   9, 8, 7, 10
 ] 
 */
 
 // IFFE
-/*
 (function(arr){
     let obj = {};
     let a = [];
@@ -285,7 +267,6 @@ output=> [
 //h. Rotate an array by k times
 
 //anonymous function
-/*
 var arr=[1,2,3,4,5];
 var rotate=function(arr, k)
 {
@@ -297,11 +278,10 @@ arr.push(arr.shift());
 return arr;
 }
 var result=rotate(arr,3); //rotates/shifts the array elements from left to right by 3 places.
-console.log(result);*/
+console.log(result);
 //output=> [ 4, 5, 1, 2, 3 ]
 
 // IFFE
-/*
 (function(arr,k){
     for(let i=1;i<=k;i++)
 {
@@ -310,4 +290,3 @@ arr.push(arr.shift());
 console.log(arr);
 })([1,2,3,4,5],2); //rotates/shifts the array elements from left to right by 2 places.
 //output=> [ 3, 4, 5, 1, 2 ]
-*/
